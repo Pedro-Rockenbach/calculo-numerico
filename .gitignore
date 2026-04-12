@@ -1,0 +1,5 @@
+# Arquivos temporários e de histórico
+*.bin
+*.sav
+.history.scilab
+.DS_Store

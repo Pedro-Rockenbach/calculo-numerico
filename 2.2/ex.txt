@@ -1,0 +1,17 @@
+Objetivo: descobrir o intervalo da função f(x) = exp(-x) - sin(x) , e = 10^-5
+
+Para isso, faz-se necessário utilizar o teorema do valor intermediario(bolzano)
+
+A regra é simples: se você testar dois valores de x (vamos chamar de a e b) e o sinal do resultado de f(x) mudar de positivo para negativo (ou vice-versa), significa que a linha do gráfico cruzou o eixo zero. Logo, a raiz está ali no meio!
+
+1. Testando x = 0
+  
+  f(0) = exp^-0 - sin(0) = 1
+
+2. Testando x = 1:
+  
+  f(1) = exp^-1 - sin(1) ~ -0.4736
+
+Conclusão: como em x = 0 a função estava do lado positivo e em x = 1
+ela desceu para o lado negativo, a primeira raiz positiva esta obrigatoriamente
+entre [0, 1]
