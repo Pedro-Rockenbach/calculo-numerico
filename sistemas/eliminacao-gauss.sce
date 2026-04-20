@@ -1,79 +1,75 @@
-clear();clc();
+clear(); clc();
 
-printf("\nEliminacao de Gauds sem pivoteamento\n")
-printf("Resolucao direta de sistema de equações lineares \n")
+printf("\nEliminacao de Gauss sem pivoteamento\n")
+printf("Resolucao direta de sistema de equacoes lineares \n")
 
-// ex 3.1
-printf("\nDados de entredad - matriz A e vetor B:\n")
-
+// Dados de entrada - matriz A e vetor B
+printf("\nDados de entrada - matriz A e vetor B:\n")
 A = [3,2,4; 1,1,2; 4,3,-2]
 B = [1;2;3]
-T=A
+T = A // Salva a matriz original para verificacao
 
-printf("\n Entrada - Matriz A (original):")
+printf("\nEntrada - Matriz A (original):\n")
 disp(A)
 
-printf("\n Entrada - Vetor B (original):")
+printf("\nEntrada - Vetor B (original):\n")
 disp(B)
-
-// Printf("\n Dimensao da matrriz:")
-// disp(n)
 
 printf("\nTriangulacao:\n")
-// Algoritmo de triangulacao
 n = length(B)
-for k = (1:n-1)
-  for i = (k+1:n)
-    m = A(i,k)/A(k,k)
-    A(i,k) = 0
-    for j = (k+1:n)
-      A(i,j)= A(i,j) - A(k,j) * m
+
+// Algoritmo de triangulacao
+for k = 1:(n-1)
+    // Trava de segurança contra divisão por zero
+    if A(k,k) == 0 then
+        error("Pivô nulo encontrado. O método sem pivoteamento falhou.");
     end
-    B(i) = B(i) - B(k) * m
-    //printf("Matriz A")
-    //disp(A);
-    // printf("Matriz B")
-    //disp(B);
-  end
+    
+    for i = (k+1):n
+        m = A(i,k) / A(k,k)
+        A(i,k) = 0 // Zera o elemento abaixo do pivô
+        
+        // OTIMIZAÇÃO: Operação vetorial substituindo o laço 'for j'
+        A(i, (k+1):n) = A(i, (k+1):n) - A(k, (k+1):n) * m
+        
+        B(i) = B(i) - B(k) * m
+    end
 end
 
-printf("Saida - matriz A (triangulacao)")
+printf("Saida - matriz A (triangulacao):\n")
 disp(A)
-printf("Saida - matriz B (triangulacao)")
+printf("Saida - matriz B (triangulacao):\n")
 disp(B)
 
-printf("Retrosubsitituicao\n")
-U=A
-C=B
-n = length(C)
-X(n) = C(n)/U(n,n)
-for k = (n-1:-1:1)
-  soma = 0
-  for j = (k+1:n)
-    soma = soma + U(k,j) * X(j)
-  end
+printf("\nRetrosubstituicao:\n")
+U = A
+C = B
+X = zeros(n, 1) // Pre-alocando o vetor X para melhor performance
 
-  X(k) = (C(k) - soma)/U(k,k)
+X(n) = C(n) / U(n,n)
+for k = (n-1):-1:1
+    soma = 0
+    for j = (k+1):n
+        soma = soma + U(k,j) * X(j)
+    end
+    X(k) = (C(k) - soma) / U(k,k)
 end
 
-// Dados de saida - solucao X, do sistema AX=B
-printf("Solucao X do sistema\n")
-mprintf(" %.6f\n", [X])
+// Dados de saida - solucao X
+printf("\nSolucao X do sistema:\n")
+mprintf(" %.6f\n", X)
 
-printf("\n Verificao da solucao, se AX = B")
-
-for i=(1:n)
-  s = 0
-  for j=(1:n)
-    s = s+(T(i,j)*X(j))
-    if(j<n)
-      printf("(%d*%.6f) + ", T(i,j), (X(j)))
+printf("\nVerificacao da solucao (T*X = B):\n")
+for i = 1:n
+    s = 0
+    for j = 1:n
+        s = s + (T(i,j) * X(j))
+        if (j < n) then
+            printf("(%d * %.6f) + ", T(i,j), X(j))
+        else
+            // CORREÇÃO: Substituído o '+' por '=' na última iteração
+            printf("(%d * %.6f) = %.6f\n", T(i,j), X(j), s)
+        end
     end
-    if(j==n)
-      printf("(%d*%.6f) + ", T(i,j), (X(j)))
-      printf("%.6f\n", s)
-    end
-  end
 end
-printf("FIM")
-
+printf("\nFIM\n")
