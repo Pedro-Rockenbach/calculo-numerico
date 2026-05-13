@@ -1,12 +1,12 @@
 clear();clc();
 // https://www.wolframalpha.com/input?i=derivative
 printf("\n APROXIMAÇÃO PELO MÉTODO DE NEWTON-RAPHSON\n");
-deff('y = f(x)', 'y=x^2-3')
-deff('y = f1(x)', 'y=2*x')
-x_antes = 2.0
+deff('y = f(x)', 'y = 25*x^2 + log(x) - 1.5e-6')
+deff('y = f1(x)', 'y = 50*x + 1/x')
+x_antes = 0.3
 
-epsilon1 = 1e-05
-epsilon2 = 1e-05
+epsilon1 = 1e-06
+epsilon2 = 1e-06
 k = 0
 nMax = 100
 x_atual = x_antes - f(x_antes) / f1(x_antes) 

@@ -4,10 +4,11 @@ printf("\nMetodo iterativo de Gauss-Seidel");
 printf("\nResolucao iterativa de sistemas lineares\n");
 
 // Dados de entrada - matriz dos coeficientes e vetor dos termos independentes
-A = [ 4, 0, 1;
-      1, 10, 3;
-      2, 1, 4];
-B = [27; 6; 12];
+A = [20, -5, 0,  0;
+     -5, 15, -5,  0;
+     0, -5, 15, -5;
+     0,  0, -5, 19]
+B = [1100; 100; 100; 100]
 printf("Saida - matriz A (original):\n")
 disp(A)
 printf("Saida - matriz B (original):\n")
@@ -15,8 +16,8 @@ disp(B)
 
 n = length(B);          // dimensão do sistema quadrado
 Nmax = 100;             // número máximo de interações
-epsilon = 10e-6;      // tolerância
-X0 = [0; 0; 0];      // aproximação inicial
+epsilon = 1e-6;      // tolerância
+X0 = [0; 0; 0; 0];      // aproximação inicial
 X = X0;                 // vetor solução interativa
 T = A;                  // cópia para verificação final
 

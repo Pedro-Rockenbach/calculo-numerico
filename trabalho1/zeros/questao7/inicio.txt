@@ -1,0 +1,6 @@
+É necessário encontrar um valor aproximado para o diametro do cabo, a fim de que 
+suporte uma pressao p = 1,5 ⋅ 10⁻⁶kg/cm2 . Tendo isso em vista, nota-se a necessidadede uma conversao de bases, visto que a pressao maxima suportada é suporta é dada em kg/mm². Então:
+1 kg/cm² = 0,01 kg/mm²
+Assim, a função atualizada será:
+p(d) = 25d² + ln(d) - 1,5 ⋅ 10⁻⁶
+

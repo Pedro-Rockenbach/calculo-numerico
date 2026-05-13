@@ -1,0 +1,6 @@
+Tendo em vista a funcao da latencia media
+é preciso descobrir o valor da carga c quando a latencia atinge 200ms, entao:
+200 = 4c³ - 30c² + 85c + 40
+Assi, é preciso igualar a funcao a zero
+com isso, para descobrir tal valor define-se a seguinte funcao:
+f(c) = 4c³ - 30c² + 85c - 160

@@ -1,0 +1,9 @@
+Existencia: Para provar a existencia da raiz no intervalo solicitado [0.2, 0.3] verifica-se que f(0.2)f(0.3) = −0.609439412 *  1.046025696 < 0. Portanto, existe pelo menos uma raiz nesse intervalo, de acordo com o Teorema de Bolzano.
+
+Unicidade: Para provar a unicidade, deve-se analisar a derivada primeira de f(d) para a condição de preservação de sinal nos intervalos obtidos durante o estudo de sinal [0.2, 0.3]. Entao:
+f'(d) = 50*d + 1/d;
+
+f'(0.2) = 50*0.2 + 1/0.2 = 15 > 0
+f'(0.3) = 50*0.3 + 1/0.3 ~= 18.3 > 0
+
+Como a funcao permanece positiva nesse intervalo, e adcionando o fato da funcao ser positiva para todo d > 0, e sendo assim, sempre crescente nessa condição, comprova-se sua unicidade em relacao a raiz no intervalo.

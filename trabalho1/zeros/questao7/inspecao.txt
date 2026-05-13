@@ -1,0 +1,7 @@
+Analisando por inspeção o intervalo dado para d [0.2, 0.3], temos que:
+
+f(0.2) = 25(0.2)² + ln(0.2) - 1,5 ⋅ 10⁻⁶ = −0.609439412
+f(0.3) = 25(0.3)² + ln(0.3) - 1,5 ⋅ 10⁻⁶ = 1.046025696
+
+A partir do Teorema de Bolzano, verifica-se que f(0.2)f(0.3) = −0.609439412 *  1.046025696 < 0. Portanto, existe pelo menos uma raiz nesse intervalo.
+

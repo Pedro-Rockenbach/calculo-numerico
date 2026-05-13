@@ -1,0 +1,20 @@
+1) Uma vez que estamos buscando um valor positivo para c, em que c representa o numeros de usuários, vamos fazer o estudo de sinal de f(c).
+
+Primeiro, cabe verificar o intervalo a ser escolhido.
+Pelo Teorema de Bolzano, precisamos achar um intervalo em que f(a)f(b) < 0. Entao
+Se o intervalo escolhido for [0, 6] :
+f(0) = 4(0³) - 30(0²) + 85*0 - 160 = - 160
+f(6) = 4(6³) - 30(6²) + 85*6 - 160 = 134
+Logo, -160*134 < 0.
+
+Estudo de sinal:
+
+f(0) = 4(0³) - 30(0²) + 85(0) - 160 = -160
+f(1) = 4(1³) - 30(1²) + 85(1) - 160 = -101
+f(2) = 4(2³) - 30(2²) + 85(2) - 160 = -78
+f(3) = 4(3³) - 30(3²) + 85(3) - 160 = -67
+f(4) = 4(4³) - 30(4²) + 85(4) - 160 = -44
+f(5) = 4(5³) - 30(5²) + 85(5) - 160 = 15
+f(6) = 4(6³) - 30(6²) + 85(6) - 160 = 134
+
+É possível observar que houve uma mudança de sinal quando c assumiu os valores de 5 e 6. Portanto, como nos intervalos escolhidos ocorreu apenas uma mudança de sinal, o intervalo candidato para a raiz é [4, 5].

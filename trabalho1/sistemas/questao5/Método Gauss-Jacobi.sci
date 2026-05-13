@@ -4,21 +4,21 @@ printf("\n***** Método Interativo de Gauss-Jacobi *****\n");
 printf(" Resolução interativa de sistemas lineares \n");
 
 // Dados de entrada - Matriz dos coeficientes e vetor dos termos independentes
-A = [ 4, 0, 1;
-      1, 10, 3;
-      2, 1, 4];
-B = [27; 6; 12];
-
-printf("\n ***** Dados de Entrada - Matriz A e vetor B *****:\n");
-printf("\n Entrada - Matriz A (original):");
-disp(A);
-printf("\n Entrada - Vetor B (original):");
-disp(B);
+A = [ 2 -1  0  0  0;
+     -1  2 -1  0  0;
+      0 -1  2 -1  0;
+      0  0 -1  2 -1;
+      0  0  0 -1  2];
+B = [ 100; 0; 0; 0; 200];
+printf("Saida - matriz A (original):\n")
+disp(A)
+printf("Saida - matriz B (original):\n")
+disp(B)
 
 n = length(B);          // dimensão do sistema quadrado
-Nmax = 100;             // número máximo de interações
-epsilon = 1.06e-6;      // tolerância
-X0 = [0; 0; 0];      // aproximação inicial
+Nmax = 1000;             // número máximo de interações
+epsilon = 1e-6;      // tolerância
+X0 = [0; 0; 0; 0; 0];      // aproximação inicial
 X = X0;                 // vetor solução interativa
 T = A;                  // cópia para verificação final
 

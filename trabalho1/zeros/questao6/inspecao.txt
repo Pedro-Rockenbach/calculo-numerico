@@ -1,0 +1,13 @@
+Primeiro, cabe verificar o intervalo a ser escolhido. Uma breve analise do grafico da funcao permite escolher o seguinte intervalo [0, 8]. A partir dele, pode-se fazer o estudo do sinal:
+
+f(0) = 5 - 20(1 - 1) = 5
+f(1) = 5 - 20(exp(−0,2(1)) − exp(−0,75(1))) = −1.927284007
+f(2) = 5 - 20(exp(−0,2(2)) − exp(−0,75(2))) = −3.943797718
+f(3) = 5 - 20(exp(−0,2(3)) − exp(−0,75(3))) = −3.868248231
+f(4) = 5 - 20(exp(−0,2(4)) − exp(−0,75(4))) = −2.990837915
+f(5) = 5 - 20(exp(−0,2(5)) − exp(−0,75(5))) = −1.887233906
+f(6) = 5 - 20(exp(−0,2(6)) − exp(−0,75(6))) = −0.801704307
+f(7) = 5 - 20(exp(−0,2(7)) − exp(−0,75(7))) = 0.173011089
+f(8) = 5 - 20(exp(−0,2(8)) − exp(−0,75(8))) = 1.0116
+
+A partir desse estudo, nota-se uma mudança de sinal nos subintervalos [0, 1] e [6, 7], sendo entao esses candidatos para a raiz.

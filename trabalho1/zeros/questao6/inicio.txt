@@ -1,0 +1,6 @@
+Em primeiro lugar, encontra-se a distância d onde o nível de oxigenio atinge ) = 5mg/L, a partir da substituição do valor na equação:
+C(d) = 10 − 20(exp(−0,2d) − exp(−0,75d)) − 5
+Entao, a funcao é igualada a zero a fim de obter a funcao que sera usada para obtencao da raiz f(d):
+f(d) = 5 − 20(exp(−0,2d) − exp(−0,75d)) = 0
+
+

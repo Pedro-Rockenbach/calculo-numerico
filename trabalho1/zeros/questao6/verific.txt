@@ -1,0 +1,3 @@
+A partir dos métodos de refinamento, observa-se que o valor médio da raiz
+é 0.602355. Logo, f(0.602355) = 5 − 20(exp(−0,2(0.602355)) − exp(−0,75(0.602355))) = 0.000002787 = 2.787 10⁻⁶ ~= 0.
+Portanto, a concentração de oxigênio cai para 5mg/L quando a distância do despejo de poluentes é de aproximadamente 0,602km.

@@ -1,0 +1,2 @@
+A partir do refinamento, consta-se que o valor medio assumido pela rais é: 0.239203
+Assim, pode-se concluir que, dada a pressao de 1,5 x 10⁻⁴ kg/cm², o cabo precisa possuir um diametro de aproximadamente 0.239 mm para resistir com segurança.

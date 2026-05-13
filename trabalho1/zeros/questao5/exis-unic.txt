@@ -1,0 +1,9 @@
+
+Existencia: Utilizando o subintervalo [4, 5], é necessario mostrar que f(a)f(b) < 0, a fim de provar a existencia da raiz nesse subintervalo. Como f(4)f(5) = (-44)*15 = -660, sendo -660 < 0, prova-se pelo teorema de bolzano a existencia da raiz.
+Unicidade: Para provar a unicidade, deve-se analisar se a derivada primeira de 
+f(c) preserva o sinal no subintervalo [4,5].
+f'(c) = 12c² - 60c + 85
+f'(4) = 124(4)² - 60(4) + 85 = 37 > 0
+f'(5) = 12(5)² - 60(5) + 85 = 85 > 0
+Uma vez que a função é polinomial e, portanto, continua, e não troca de sinal
+no intervalo analisado, a raiz é unica no subintervalo escolhido.

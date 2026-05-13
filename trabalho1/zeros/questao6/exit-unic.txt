@@ -1,0 +1,13 @@
+Existência: Para provar a existencia da raiz no intervalo escolhido [a, b], deve-se cumprir a seguinte condição f(a)f(b) < 0. Então, a partir do intervalo [0, 1], temos que f(0)f(1) = 5 * −1.927284007 < 0. Portando, comprova-se, pelo Teorema de Bolzano, a existência de um raiz no intervalo escolhido.
+Unicidade: Para provar a unicidade, deve-se analisar a derivada primeira de f(d) para a condição de preservação de sinal nos intervalos obtidos durante o estudo de sinal [0, 1] e [6, 7]:
+f′(d)= 4 (exp(−0.2d)) − 15(exp(−0.75d))
+
+f′(0)= 4 (1) − 15(1) = - 11 < 0
+f′(1)= 4 (exp(−0.2)) − 15(exp(−0.75)) = −3.810575279 < 0
+
+f′(6)= 4 (exp(−0.2*6)) − 15(exp(−0.75*6)) = 1.0381419 > 0
+f′(7)= 4 (exp(−0.2*7)) − 15(exp(−0.75*7)) = 0.90767508 > 0
+
+Como nos intervalos [0, 1] e [6, 7] a funcao nao troca de sinal, sendo eles negativos e positivos, respectivamente, durante os intervalos, existe apenas uma raiz nesses intervalos analsiados, comprovando-se sua unicidade. 
+
+

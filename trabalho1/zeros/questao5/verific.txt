@@ -1,0 +1,3 @@
+A partir dos métodos de refinamento, observa-se que o valor médio da raiz
+é 4.811275. Logo, f(4.811275) = 4(4.811275)³ - 30(4.811275)² + 85(4.811275) - 160 = 0.000001401 = 140.1 10⁻⁸ ~= 0.
+Percebe-se então, que o resultado obtido atende a análise solicitada, visto que c esta em centenas, evidencia-se que o sistema suporta aproximadamente 481 usuarios simulataneos quando a latencia atinge o limiar aceitavel de 200ms
